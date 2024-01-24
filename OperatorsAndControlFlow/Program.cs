@@ -169,9 +169,9 @@ namespace OperatorsAndControlFlow
 
             int x = 10;
 
-            x = x--;
+            x = --x;
             Console.WriteLine(x);
-            x = x + 1;
+            x = x++;
             Console.WriteLine(x);
 
             //Console.WriteLine(output);
@@ -203,7 +203,7 @@ namespace OperatorsAndControlFlow
 
             
             // Entry Controlled Loops
-            for (int i = 10; i > 5; i--)
+            for (int i = 10; i > 5; --i)
             {
                 Console.WriteLine(i);
             }
@@ -214,9 +214,9 @@ namespace OperatorsAndControlFlow
             list.Add(11);
             list.Add(15);
 
-            foreach (var item in list)
+            for (int i = 0; i < list.Count; i ++)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(list[i]);
             }
 
 
@@ -225,12 +225,12 @@ namespace OperatorsAndControlFlow
                 Console.WriteLine(i);
             }
 
-            int count = 0; 
-            //while (count < 5)
-            //{
-            //    Console.WriteLine(true);
-            //    count++;
-            //}
+            int count = 0;
+            while (count < 5)
+            {
+                Console.WriteLine(true);
+                count++;
+            }
 
             do
             {
@@ -243,6 +243,83 @@ namespace OperatorsAndControlFlow
 
 
 
+            // Type Casting OR Type Conversion
+
+            // 2 Types Of Casting
+
+            // Implicit Type Casting
+            // Explicit Type Casting
+
+
+            // byte => short, int, long, float, double
+            // short => int, long, float, double
+            // int => long, float, double
+            // long => float, double
+            // float => double
+
+
+            //int numInt = 1500;
+
+            //Type numIntType = numInt.GetType();
+
+            //double numDouble = numInt;
+
+            //Type numDoubleType = numDouble.GetType();
+
+
+            //double numDouble = 10;
+
+            //int numInt = (int)numDouble;
+
+            //int var2 = Convert.ToInt32(numDouble);
+
+
+            //double numDouble = 10.34;
+
+            //int numInt = (int)numDouble;
+
+
+            // 0 to 255 
+
+            //int num1 = 500;
+            //byte byteNum = (byte)num1;
+
+
+            string num = "100";
+
+            int aa = int.Parse(num);
+            var bb = Convert.ToInt16(num);
+
+
+
+            string cc = "True";
+            bool dd = Convert.ToBoolean(cc);
+
+
+
+            for (int i = 0; i < 15; i++)
+            {
+                Console.WriteLine(i);
+                if(i == 5)
+                {
+                    break;
+                }
+            }
+
+
+
+            for (int i = 0; i < 5; i++)
+            {
+                if (i == 2)
+                {
+                    continue;
+                }
+
+                Console.WriteLine(i);
+
+            }
+
+            Console.ReadLine();
 
         }
     }
